@@ -1,0 +1,35 @@
+('the prep index from ', 0, ' to ', 20)
+starting preprocessing
+THCudaCheck FAIL file=/opt/conda/conda-bld/pytorch_1549617926868/work/torch/csrc/cuda/Module.cpp line=34 error=35 : CUDA driver version is insufficient for CUDA runtime version
+('data path------------', '../NLST/100012')
+('index:', 0)
+('save to: ', './prep_result//01-02-1999-NLST-LSS-56831_clean')
+01-02-1999-NLST-LSS-56831 done
+('index:', 1)
+('save to: ', './prep_result//01-02-2000-NLST-LSS-60484_clean')
+01-02-2000-NLST-LSS-60484 done
+('index:', 2)
+('index:', 3)
+('index:', 4)
+('index:', 5)
+('index:', 6)
+('index:', 7)
+('index:', 8)
+('index:', 9)
+('index:', 10)
+('index:', 11)
+('index:', 12)
+('index:', 13)
+('index:', 14)
+('index:', 15)
+('index:', 16)
+('index:', 17)
+('index:', 18)
+('index:', 19)
+end preprocessing
+Traceback (most recent call last):
+  File "main.py", line 40, in <module>
+    torch.cuda.set_device(0)
+  File "/home/lil18/.conda/envs/env2.7/lib/python2.7/site-packages/torch/cuda/__init__.py", line 264, in set_device
+    torch._C._cuda_setDevice(device)
+RuntimeError: cuda runtime error (35) : CUDA driver version is insufficient for CUDA runtime version at /opt/conda/conda-bld/pytorch_1549617926868/work/torch/csrc/cuda/Module.cpp:34
