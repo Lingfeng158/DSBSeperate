@@ -1,5 +1,7 @@
+# Note
 This tool is modified from DSB2017.   
-If any session from same subject passes segmentation preprocessing, this modified version ensures that all sessions pass segmentation preprocessing. It accepts two different files for single lung image processing. A few modification to data stracture is necessary in order for this code to work. In each session folder, instead of placing nifti file directly, place "to-be-processed file" in ```data``` folder, and place mask file in ```mask``` folder. Mask can be obtained by non-rigid co-register "to-be-processed" file with file of same subject that can be initially processed by DSB code, and take the inverse file.
+If any session from same subject passes segmentation preprocessing, this modified version ensures that all sessions pass segmentation preprocessing. It accepts two different files for single lung image processing. A few modification to data stracture is necessary in order for this code to work. In each session folder, instead of placing nifti file directly, place "to-be-processed file" in ```data``` folder, and place mask file in ```mask``` folder. Mask can be obtained by non-rigid co-register "to-be-processed" file with file of same subject that can be initially processed by DSB code, and take the inverse file.  
+The tool is optimized for preprocessing only. To use nodule detection, replace ```full_prep.py``` under preprocesing folder to original file from DSB2017 GitHub.
 
 # Paper link 
 https://arxiv.org/abs/1711.08324
