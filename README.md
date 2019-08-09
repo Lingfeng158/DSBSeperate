@@ -31,3 +31,6 @@ Assume subject X has two sessions that passed initial QA process, A and B. A suc
 
 4. Make the root path of this program point to subject X's folder, and run. 
 
+# Idea
+
+It is also possible that with ```A2BWarp.nii.gz, A2B1Warp.nii.gz A2BInverseWarp.nii.gz, A2B1InverseWarp.nii.gz``` and ```A2B0GenericAffine.mat```, we can save the  mask file of session A and deform it to fit session B with ```antsApplyTransform```, further eliminate the possibility that DSB failing to create masks
