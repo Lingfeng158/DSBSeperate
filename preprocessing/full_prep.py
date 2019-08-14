@@ -101,12 +101,18 @@ def savenpy(id,filelist,prep_folder,data_path,use_existing=True):
                     extendbox[1,0]:extendbox[1,1],
                     extendbox[2,0]:extendbox[2,1]]
         sliceim = sliceim2[np.newaxis,...]
+	#save as npy
+	np.save(os.path.join(prep_folder,name+'_clean'),sliceim)
+
+        np.save(os.path.join(prep_folder,name+'_label'),np.array([[0,0,0,0]]))
+	#Save as nifti
         sliceim=sliceim.reshape(sliceim.shape[-3], sliceim.shape[-2], sliceim.shape[-1])
 	matr=np.array([[0,0,-1,0],[0,-1,0,0],[1,0,0,0],[0,0,0,1]])
 	ni_img = nib.Nifti1Image(sliceim, matr)
 	#activate the following line to keep conformity with old data
 	#ni_img = nib.Nifti1Image(sliceim, np.eye(4))
         nib.save(ni_img, os.path.join(prep_folder,name+'_clean.nii.gz'))
+
     except Exception as e:
         print('bug in '+name)
 	print(e)
